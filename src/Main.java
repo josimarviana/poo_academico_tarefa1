@@ -1,6 +1,7 @@
 import br.com.appdahora.poo.ficharios.FicharioAluno;
 import br.com.appdahora.poo.modelos.Aluno;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 // completar os menus
 // todos devem ter os metodos cadastrar, alterar, excluir, consultar e relatorio
@@ -8,12 +9,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Scanner entrada = new Scanner(System.in);
-        Aluno alunos [] = new Aluno[40];
+        ArrayList<Aluno> alunos  = new ArrayList<Aluno>();
         FicharioAluno ficharioAluno = new FicharioAluno(alunos);
 
         int operacaoGeral, operacaoCadastro;
         do {
-            System.out.println(" === ALUNO === ");
+            System.out.println(" === ACADEMICO === ");
             System.out.println("1 - Aluno ");
             System.out.println("2 - Professor ");
             System.out.println("3 - Turmas ");
