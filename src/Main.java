@@ -1,7 +1,9 @@
 import br.com.appdahora.poo.ficharios.FicharioAluno;
+import br.com.appdahora.poo.ficharios.FicharioEnturmacao;
 import br.com.appdahora.poo.ficharios.FicharioProfessor;
 import br.com.appdahora.poo.ficharios.FicharioTurma;
 import br.com.appdahora.poo.modelos.Aluno;
+import br.com.appdahora.poo.modelos.Enturmacao;
 import br.com.appdahora.poo.modelos.Professor;
 import br.com.appdahora.poo.modelos.Turma;
 
@@ -19,13 +21,16 @@ public class Main {
         FicharioProfessor ficharioProfessor = new FicharioProfessor(professores);
         ArrayList<Turma> turmas  = new ArrayList<Turma>();
         FicharioTurma ficharioTurma = new FicharioTurma(turmas);
+        ArrayList<Enturmacao> enturmacoes  = new ArrayList<Enturmacao>();
+        FicharioEnturmacao ficharioEnturmacao = new FicharioEnturmacao(enturmacoes, turmas, alunos);
 
-        int operacaoGeral, opCadastroAluno, opCadastroProfessor, opCadastroTurma;
+        int operacaoGeral, opCadastroAluno, opCadastroProfessor, opCadastroTurma, opCadastroEnturmacao;
         do {
             System.out.println(" === ACADEMICO === ");
             System.out.println("1 - Aluno ");
             System.out.println("2 - Professor ");
             System.out.println("3 - Turmas ");
+            System.out.println("4 - Enturmações ");
             System.out.println("0 - Sair ");
             operacaoGeral = entrada.nextInt();
             entrada.skip("\n");
@@ -115,8 +120,6 @@ public class Main {
                         System.out.println("3 - Excluir Turma ");
                         System.out.println("4 - Consultar Turma ");
                         System.out.println("5 - Relatório da Turma ");
-                        System.out.println("6 - Matricular alunos ");
-                        System.out.println("7 - Desmatricular alunos ");
                         System.out.println("0 - Voltar ao menu principal");
                         System.out.println("Opção: ");
                         opCadastroTurma = entrada.nextInt();
@@ -138,12 +141,6 @@ public class Main {
                             case 5:
                                 ficharioTurma.relatorio();
                                 break;
-                            case 6:
-                                System.out.println("em desenvolvimento ...");
-                                break;
-                            case 7:
-                                System.out.println("em desenvolvimento ...");
-                                break;
                             default:
                                 if (opCadastroTurma != 0) {
                                     System.out.println("Opção inválida.");
@@ -152,7 +149,41 @@ public class Main {
 
                     } while (opCadastroTurma != 0);
 
-                    break; // fim do case aluno
+                    break; // fim do case turma
+                case 4: // cadastro de enturmação
+                    do {
+                        System.out.println(" === ENTURMACAO === ");
+                        System.out.println("1 - Cadastrar Enturmação ");
+                        System.out.println("3 - Excluir Enturmação ");
+                        System.out.println("4 - Consultar Enturmação ");
+                        System.out.println("5 - Relatório do Enturmação ");
+                        System.out.println("0 - Voltar ao menu principal");
+                        System.out.println("Opção: ");
+                        opCadastroEnturmacao = entrada.nextInt();
+                        entrada.skip("\n");
+
+                        switch (opCadastroEnturmacao) {
+                            case 1:
+                                ficharioEnturmacao.cadastrar();
+                                break;
+                            case 3:
+                                ficharioEnturmacao.excluir();
+                                break;
+                            case 4:
+                                ficharioEnturmacao.consultar();
+                                break;
+                            case 5:
+                                ficharioEnturmacao.relatorio();
+                                break;
+                            default:
+                                if (opCadastroEnturmacao != 0) {
+                                    System.out.println("Opção inválida.");
+                                }
+                        }
+
+                    } while (opCadastroEnturmacao != 0);
+
+                    break; // fim do case da enturmacao
                 default:
                     if (operacaoGeral != 0) {
                         System.out.println("Opção inválida.");

@@ -9,12 +9,9 @@ public class Turma {
     private String codigo;
     private String nome;
 
-    private ArrayList<Aluno> alunos;
-
     public Turma(String codigo, String nome){
         this.codigo = codigo;
         this.nome = nome;
-        this.alunos = new ArrayList<Aluno>();
     }
     public String getCodigo() {
         return codigo;
