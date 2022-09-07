@@ -4,18 +4,18 @@ import java.util.Objects;
 
 public class Aluno extends Pessoa{
     private String matricula;
-    public Aluno(){
 
-    }
-
-    public Aluno(String nome, String matricula){
+    public Aluno(String matricula, String cpf, String nome, String telefone, String email){
         this.matricula = matricula;
         this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.email = email;
     }
     @Override
     public String toString(){
 
-        return this.nome + " "+this.matricula;
+        return "Matricula: "+this.matricula + " Cpf: "+this.cpf+" Nome: "+this.nome+" Telefone: "+this.telefone+"  Email: "+this.email;
     }
 
     @Override
