@@ -36,9 +36,14 @@ public class FicharioEnturmacao {
 
         Enturmacao enturmacao; //objeto para cada posição
         enturmacao = new Enturmacao(turmas.get(posicaoTurma), alunos.get(posAluno));
-        enturmacoes.add(enturmacao);
 
-        System.out.println("Enturmação realizada com sucesso!");
+        if(enturmacoes.contains(enturmacao)){
+            System.out.println("Enturmação já realizada!");
+        }else{
+            enturmacoes.add(enturmacao);
+        }
+
+
 
     }
 

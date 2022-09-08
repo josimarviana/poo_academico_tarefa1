@@ -28,6 +28,19 @@ public class Enturmacao {
         return turma;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Enturmacao that = (Enturmacao) o;
+        return turma.equals(that.turma) && aluno.equals(that.aluno);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(turma, aluno);
+    }
+
     public void setTurma(Turma turma) {
         this.turma = turma;
     }
@@ -36,19 +49,6 @@ public class Enturmacao {
     public String toString(){
 
         return "Turma: "+this.turma.getNome() + " Aluno: "+this.aluno.getNome();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Enturmacao enturmacao = (Enturmacao) o;
-        return Objects.equals(codigo, enturmacao.codigo);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(codigo);
     }
 
 

@@ -1,6 +1,5 @@
 package br.com.appdahora.poo.modelos;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Turma {
