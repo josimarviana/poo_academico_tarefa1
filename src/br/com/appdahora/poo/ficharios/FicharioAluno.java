@@ -3,8 +3,7 @@ import br.com.appdahora.poo.modelos.Aluno;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-// adicionar os metodos alterar, excluir e consultar
-// não permitir exclusão de alunos vinculados a turmas
+
 public class FicharioAluno {
     // private Aluno alunos[];
     private ArrayList<Aluno> alunos;
@@ -79,7 +78,7 @@ public class FicharioAluno {
 
     public void excluir() {
         int pos, resp;
-
+        //TODO: Inserir validação para não permitir excluir aluno que esteja numa turma ou excluir também a enturmação
         System.out.println(" --==[Excluir ALUNO]==-- ");
         System.out.println("Qual a posição deseja excluir? ");
         pos = entrada.nextInt();

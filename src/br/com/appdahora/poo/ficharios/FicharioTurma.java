@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FicharioTurma {
-    // para manutencao nas turmas
-    // deve ter os metodos cadastrar, alterar, excluir, consultar e relatorio
+
     private ArrayList<Turma> turmas;
     private final Scanner entrada;
 
@@ -60,7 +59,7 @@ public class FicharioTurma {
 
     public void excluir() {
         int pos, resp;
-
+        //TODO: Inserir validação para não permitir excluir turma que tenham alunos vinculados
         System.out.println(" --==[Excluir TURMA]==-- ");
         System.out.println("Qual a posição deseja excluir? ");
         pos = entrada.nextInt();

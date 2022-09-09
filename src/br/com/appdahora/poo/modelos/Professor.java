@@ -3,7 +3,7 @@ package br.com.appdahora.poo.modelos;
 import java.util.Objects;
 
 public class Professor extends Pessoa{
-    // deve ter os metodos toString, equals e hashCode
+
     private String registro;
 
     public Professor(String registro, String cpf, String nome, String telefone, String email){
