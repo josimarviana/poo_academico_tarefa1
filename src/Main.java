@@ -9,8 +9,6 @@ import br.com.appdahora.poo.modelos.Turma;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-// completar os menus
-// todos devem ter os metodos cadastrar, alterar, excluir, consultar e relatorio
 
 public class Main {
     public static void main(String[] args){

@@ -1,17 +1,18 @@
 package br.com.appdahora.poo.modelos;
 
-import javax.xml.crypto.dom.DOMCryptoContext;
 import java.util.Objects;
-import java.util.function.ToDoubleBiFunction;
 
 public class Enturmacao {
-    private int codigo;
+    public static int getCodigo() {
+        return codigo;
+    }
+
+    private static int codigo;
     private Turma turma;
     private Aluno aluno;
 
     public Enturmacao(Turma turma, Aluno aluno) {
-        //TODO Automatizar geração código
-        this.codigo = 0;
+        codigo++;
         this.turma = turma;
         this.aluno = aluno;
     }
@@ -48,7 +49,7 @@ public class Enturmacao {
     @Override
     public String toString(){
 
-        return "Turma: "+this.turma.getNome() + " Aluno: "+this.aluno.getNome();
+        return "Codigo: "+Enturmacao.getCodigo() + " Turma: "+this.turma.getNome() + " Aluno: "+this.aluno.getNome();
     }
 
 

@@ -3,7 +3,6 @@ package br.com.appdahora.poo.modelos;
 import java.util.Objects;
 
 public class Turma {
-
     private String codigo;
     private String nome;
 
