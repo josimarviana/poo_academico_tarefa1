@@ -3,16 +3,26 @@ package br.com.appdahora.poo.modelos;
 import java.util.Objects;
 
 public class Enturmacao {
-    public static int getCodigo() {
+    public int getCodigo() {
         return codigo;
     }
 
-    private static int codigo;
+    private static int geradorCodigo;
+
+    @Override
+    public String toString(){
+
+        return "Codigo: "+this.getCodigo() + " Turma: "+
+                this.getTurma().getNome() + " Aluno: "+
+                this.getAluno().getNome();
+    }
+    private int codigo;
+
     private Turma turma;
     private Aluno aluno;
 
     public Enturmacao(Turma turma, Aluno aluno) {
-        codigo++;
+        codigo = ++geradorCodigo;
         this.turma = turma;
         this.aluno = aluno;
     }
@@ -46,11 +56,7 @@ public class Enturmacao {
         this.turma = turma;
     }
 
-    @Override
-    public String toString(){
 
-        return "Codigo: "+Enturmacao.getCodigo() + " Turma: "+this.turma.getNome() + " Aluno: "+this.aluno.getNome();
-    }
 
 
 }
