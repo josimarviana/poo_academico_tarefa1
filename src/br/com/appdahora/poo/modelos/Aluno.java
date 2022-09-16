@@ -13,6 +13,9 @@ public class Aluno extends Pessoa{
         this.matricula = matricula;
     }
 
+    public Aluno(String matricula){
+        this.matricula = matricula;
+    }
     public Aluno(String matricula, String cpf, String nome, String telefone, String email){
         this.matricula = matricula;
         this.nome = nome;

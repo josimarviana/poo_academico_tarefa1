@@ -104,12 +104,38 @@ public class FicharioAluno {
     }
 
     public void consultar() {
-        int pos;
+        int pos, resp;
+        String matricula;
 
         System.out.println(" === Consultar ALUNO === ");
-        System.out.println("Qual a posição do vetor deseja consultar? ");
-        pos = entrada.nextInt();
+        System.out.println("Como deseja procurar? (1-indice) ou (2-matricula) ");
+        resp = entrada.nextInt();
         entrada.skip("\n");
+
+        if(resp==1) {
+            System.out.println("Qual a posição do vetor deseja consultar? ");
+            pos = entrada.nextInt();
+            entrada.skip("\n");
+            procurar(pos);
+        }else{
+            System.out.println("Qual a matrícula que deseja consultar? ");
+            matricula = entrada.nextLine();
+            entrada.skip("\n");
+            procurar(matricula);
+        }
+
+    }
+
+    public void procurar(String chave) {
+        Aluno aluno = new Aluno(chave);
+
+        if (alunos.indexOf(aluno) >=0) {
+            System.out.println(alunos.get(alunos.indexOf(aluno)));
+        } else {
+            System.out.println(" Aluno não encontrado ");
+        }
+    }
+    public void procurar(int pos) {
 
         if (alunos.get(pos) != null) {
             System.out.println(alunos.get(pos));
@@ -117,7 +143,6 @@ public class FicharioAluno {
             System.out.println(" Posicao inválida. ");
         }
     }
-
     public void relatorio() {
 
         System.out.println("[Relatório de ALUNOS]");
