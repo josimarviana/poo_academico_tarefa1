@@ -48,31 +48,37 @@ public class FicharioAluno {
         pos = entrada.nextInt();
         entrada.skip("\n");
 
-        if (alunos.get(pos) != null) {
+        try{
+            if (alunos.get(pos) != null) {
 
-            System.out.println("CPF atual: " + alunos.get(pos).getCpf()); //get_ pega valor do objeto
-            System.out.print("Digite o novo CPF: ");
-            cpf = entrada.nextLine();
-            alunos.get(pos).setCpf(cpf); // set_ coloca o valor no objeto
+                System.out.println("CPF atual: " + alunos.get(pos).getCpf()); //get_ pega valor do objeto
+                System.out.print("Digite o novo CPF: ");
+                cpf = entrada.nextLine();
+                alunos.get(pos).setCpf(cpf); // set_ coloca o valor no objeto
 
-            System.out.println("Nome atual: " + alunos.get(pos).getNome()); //get_ pega valor do objeto
-            System.out.print("Digite o novo Nome: ");
-            nome = entrada.nextLine();
-            alunos.get(pos).setNome(nome); // set_ coloca o valor no objeto
+                System.out.println("Nome atual: " + alunos.get(pos).getNome()); //get_ pega valor do objeto
+                System.out.print("Digite o novo Nome: ");
+                nome = entrada.nextLine();
+                alunos.get(pos).setNome(nome); // set_ coloca o valor no objeto
 
-            System.out.println("Tefone atual: " + alunos.get(pos).getTelefone()); //get_ pega valor do objeto
-            System.out.print("Digite o novo Telefone: ");
-            telefone = entrada.nextLine();
-            alunos.get(pos).setTelefone(telefone); // set_ coloca o valor no objeto
+                System.out.println("Tefone atual: " + alunos.get(pos).getTelefone()); //get_ pega valor do objeto
+                System.out.print("Digite o novo Telefone: ");
+                telefone = entrada.nextLine();
+                alunos.get(pos).setTelefone(telefone); // set_ coloca o valor no objeto
 
-            System.out.println("Endereco email atual: " + alunos.get(pos).getEmail()); //get_ pega valor do objeto
-            System.out.print("Digite o novo Endereço email: ");
-            email = entrada.nextLine();
-            alunos.get(pos).setEmail(email); // set_ coloca o valor no objeto
+                System.out.println("Endereco email atual: " + alunos.get(pos).getEmail()); //get_ pega valor do objeto
+                System.out.print("Digite o novo Endereço email: ");
+                email = entrada.nextLine();
+                alunos.get(pos).setEmail(email); // set_ coloca o valor no objeto
 
-        } else {
-            System.out.println(" Posicao inválida. ");
+            } else {
+                System.out.println(" Posicao inválida. ");
+            }
         }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("\nExceção alcançada, índice não existe");
+        }
+
 
     }
 
