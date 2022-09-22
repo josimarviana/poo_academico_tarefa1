@@ -2,6 +2,7 @@ package br.com.appdahora.poo.ficharios;
 import br.com.appdahora.poo.modelos.Aluno;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Scanner;
 
 public class FicharioAluno {
@@ -15,8 +16,8 @@ public class FicharioAluno {
     }
 
     public void cadastrar(){
-        String nome, telefone, matricula, cpf, email;
-
+        String nome, telefone, matricula, cpf, email, dataNascimento;
+        //TODO: Implementar o preenchimento da data de nascimento do aluno
         System.out.println(" === Cadastrar ALUNO ==== ");
         System.out.print("Matrícula: ");
         matricula = entrada.nextLine();

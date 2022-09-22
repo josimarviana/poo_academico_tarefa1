@@ -1,5 +1,6 @@
 package br.com.appdahora.poo.modelos;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Enturmacao {
@@ -20,6 +21,9 @@ public class Enturmacao {
 
     private Turma turma;
     private Aluno aluno;
+
+    //TODO: Implementar o preenchimento da data de enturmação do aluno
+    private Date dataEnturmacao;
 
     public Enturmacao(Turma turma, Aluno aluno) {
         codigo = ++geradorCodigo;

@@ -1,10 +1,14 @@
 package br.com.appdahora.poo.modelos;
 
+import java.util.Date;
+
 public class Pessoa {
     protected String nome;
     protected String cpf;
     protected String telefone;
     protected String email;
+    //TODO: Implementar o preenchimento da data de nascimento das pessoas
+    protected Date dataNascimento;
 
     public String getEmail() {
         return email;
