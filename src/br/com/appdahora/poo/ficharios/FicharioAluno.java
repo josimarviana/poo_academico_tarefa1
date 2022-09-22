@@ -75,7 +75,7 @@ public class FicharioAluno {
                 System.out.println(" Posicao inválida. ");
             }
         }
-        catch (ArrayIndexOutOfBoundsException e){
+        catch (IndexOutOfBoundsException e){
             System.out.println("\nExceção alcançada, índice não existe");
         }
 
@@ -86,6 +86,7 @@ public class FicharioAluno {
         int pos, resp;
         //TODO: Inserir validação para não permitir excluir aluno que esteja numa turma ou excluir também a enturmação
         System.out.println(" --==[Excluir ALUNO]==-- ");
+        //TODO: Inserir try/catch para lançar exceção de busca fora do índice
         System.out.println("Qual a posição deseja excluir? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
@@ -119,6 +120,7 @@ public class FicharioAluno {
         entrada.skip("\n");
 
         if(resp==1) {
+
             System.out.println("Qual a posição do vetor deseja consultar? ");
             pos = entrada.nextInt();
             entrada.skip("\n");
@@ -134,7 +136,7 @@ public class FicharioAluno {
 
     public void procurar(String chave) {
         Aluno aluno = new Aluno(chave);
-
+        //TODO: Inserir try/catch para lançar exceção de busca fora do índice
         if (alunos.indexOf(aluno) >=0) {
             System.out.println(alunos.get(alunos.indexOf(aluno)));
         } else {

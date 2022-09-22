@@ -51,6 +51,7 @@ public class FicharioEnturmacao {
         int pos, resp;
 
         System.out.println(" --==[Excluir Enturmação]==-- ");
+        //TODO: Buscas devem ser feitas pela posição e código
         System.out.println("Qual a posição do vetor deseja excluir? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
@@ -62,6 +63,7 @@ public class FicharioEnturmacao {
             entrada.skip("\n");
 
             if (resp == 1) {
+                //TODO: Inserir try/catch para lançar exceção de busca fora do índice
                 enturmacoes.remove(pos); // exclui um objeto do vetor
                 System.out.println(" Exclusão efetuada com sucesso. ");
 
@@ -80,7 +82,7 @@ public class FicharioEnturmacao {
         System.out.println("Qual a posição do vetor deseja consultar? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
-
+        //TODO: Inserir try/catch para lançar exceção de busca fora do índice
         // testa se existe uma enturmação na posição escolhida pelo usuário
         if (enturmacoes.get(pos) != null) {
             System.out.println(enturmacoes.get(pos));

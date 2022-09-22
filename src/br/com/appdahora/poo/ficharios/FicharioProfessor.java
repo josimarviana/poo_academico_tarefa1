@@ -43,10 +43,11 @@ public class FicharioProfessor {
         int pos;
 
         System.out.println(" ==== Alterar PROFESSOR ==== ");
+        //TODO: Buscas devem ser feitas pela posição e registro
         System.out.println("Qual a posição do vetor deseja alterar? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
-
+        //TODO: Inserir try/catch para lançar exceção de busca fora do índice
         if (professores.get(pos) != null) {
 
             System.out.println("CPF atual: " + professores.get(pos).getCpf()); //get_ pega valor do objeto
@@ -90,6 +91,7 @@ public class FicharioProfessor {
             entrada.skip("\n");
 
             if (resp == 1) {
+                //TODO: Inserir try/catch para lançar exceção de busca fora do índice
                 professores.remove(pos); // exclui um objeto do vetor
                 System.out.println(" Exclusão efetuada com sucesso. ");
 

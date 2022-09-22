@@ -43,7 +43,8 @@ public class FicharioTurma {
         System.out.println("Qual a posição do vetor deseja alterar? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
-
+        //TODO: Inserir try/catch para lançar exceção de busca fora do índice
+        //TODO: Buscas devem ser feitas pela posição e código
         if (turmas.get(pos) != null) {
 
             System.out.println("Nome atual: " + turmas.get(pos).getNome()); //get_ pega valor do objeto
