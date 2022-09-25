@@ -42,9 +42,6 @@ public class FicharioEnturmacao {
         }else{
             enturmacoes.add(enturmacao);
         }
-
-
-
     }
 
     public void excluir() {
