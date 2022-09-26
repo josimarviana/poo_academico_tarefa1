@@ -2,6 +2,7 @@ package br.com.appdahora.poo.ficharios;
 
 import br.com.appdahora.poo.modelos.Aluno;
 import br.com.appdahora.poo.modelos.Enturmacao;
+import br.com.appdahora.poo.modelos.SituacaoAluno;
 import br.com.appdahora.poo.modelos.Turma;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class FicharioEnturmacao {
         entrada.skip("\n");
 
         Enturmacao enturmacao; //objeto para cada posição
-        enturmacao = new Enturmacao(turmas.get(posicaoTurma), alunos.get(posAluno));
+        enturmacao = new Enturmacao(turmas.get(posicaoTurma),alunos.get(posAluno));
 
         if(enturmacoes.contains(enturmacao)){
             System.out.println("Enturmação já realizada!");

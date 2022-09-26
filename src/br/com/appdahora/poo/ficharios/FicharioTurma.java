@@ -60,13 +60,13 @@ public class FicharioTurma {
 
     public void excluir() {
         int pos, resp;
-        //TODO: Inserir validação para não permitir excluir turma que tenham alunos vinculados
         System.out.println(" --==[Excluir TURMA]==-- ");
         System.out.println("Qual a posição deseja excluir? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
 
-        if (turmas.get(pos) != null) {
+
+        if (turmas.get(pos) != null && turmas.get(pos).getQuantidadeAlunos()==0) {
             System.out.println(turmas.get(pos));
             System.out.println("Confirma a exclusão? (1-sim) e (2-não) ");
             resp = entrada.nextInt();
@@ -81,7 +81,7 @@ public class FicharioTurma {
             }
 
         } else {
-            System.out.println(" Posicao inválida. ");
+            System.out.println(" Posicao inválida ou turma possui alunos ");
         }
     }
 

@@ -2,7 +2,6 @@ package br.com.appdahora.poo.ficharios;
 import br.com.appdahora.poo.modelos.Aluno;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 
 public class FicharioAluno {
@@ -73,7 +72,7 @@ public class FicharioAluno {
                 alunos.get(pos).setEmail(email); // set_ coloca o valor no objeto
 
             } else {
-                System.out.println(" Posicao inválida. ");
+                System.out.println(" Posicao inválida ");
             }
         }
         catch (IndexOutOfBoundsException e){
@@ -85,14 +84,13 @@ public class FicharioAluno {
 
     public void excluir() {
         int pos, resp;
-        //TODO: Inserir validação para não permitir excluir aluno que esteja numa turma ou excluir também a enturmação
         System.out.println(" --==[Excluir ALUNO]==-- ");
         //TODO: Inserir try/catch para lançar exceção de busca fora do índice
         System.out.println("Qual a posição deseja excluir? ");
         pos = entrada.nextInt();
         entrada.skip("\n");
 
-        if (alunos.get(pos) != null) {
+        if (alunos.get(pos) != null && alunos.get(pos).getQuantidadeTurmas()==0) {
             System.out.println(alunos.get(pos));
             System.out.println("Confirma a exclusão? (1-sim) e (2-não) ");
             resp = entrada.nextInt();
@@ -107,7 +105,7 @@ public class FicharioAluno {
             }
 
         } else {
-            System.out.println(" Posicao inválida. ");
+            System.out.println(" Posicao inválida ou aluno está enturmado. ");
         }
     }
 

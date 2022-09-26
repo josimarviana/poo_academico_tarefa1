@@ -1,9 +1,28 @@
 package br.com.appdahora.poo.modelos;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Aluno extends Pessoa{
     private String matricula;
+    private ArrayList<Turma> turmas  = new ArrayList<Turma>();
+
+    public void adicionarTurma(Turma turma){
+        turmas.add(turma);
+    }
+    public SituacaoAluno getSituacaoAluno() {
+        return situacaoAluno;
+    }
+
+    public int getQuantidadeTurmas(){
+        return turmas.size();
+    }
+
+    public void setSituacaoAluno(SituacaoAluno situacaoAluno) {
+        this.situacaoAluno = situacaoAluno;
+    }
+
+    private SituacaoAluno situacaoAluno = SituacaoAluno.NaoMatriculado;
 
     public String getMatricula() {
         return matricula;
@@ -42,3 +61,4 @@ public class Aluno extends Pessoa{
         return Objects.hash(matricula);
     }
 }
+

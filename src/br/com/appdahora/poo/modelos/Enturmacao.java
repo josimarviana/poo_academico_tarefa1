@@ -30,6 +30,10 @@ public class Enturmacao {
         codigo = ++geradorCodigo;
         this.turma = turma;
         this.aluno = aluno;
+        this.aluno.setSituacaoAluno(SituacaoAluno.Matriculado);
+        this.turma.adicionarAluno(aluno);
+        this.aluno.adicionarTurma(turma);
+
     }
 
     public Aluno getAluno() {
