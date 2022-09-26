@@ -45,7 +45,7 @@ public class Aluno extends Pessoa{
     @Override
     public String toString(){
 
-        return "Matricula: "+this.matricula + " Cpf: "+this.cpf+" Nome: "+this.nome+" Telefone: "+this.telefone+"  Email: "+this.email;
+        return "Matricula: "+this.matricula + " Cpf: "+this.cpf+" Nome: "+this.nome+" Telefone: "+this.telefone+"  Email: "+this.email+"  Situacao: "+this.situacaoAluno;
     }
 
     @Override
