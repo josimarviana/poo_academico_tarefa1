@@ -3,7 +3,7 @@ package br.com.appdahora.poo.modelos;
 import java.util.Date;
 import java.util.Objects;
 
-public class Pessoa {
+public abstract class Pessoa {
     protected String nome;
     protected String cpf;
     protected String telefone;
