@@ -1,6 +1,8 @@
 package br.com.appdahora.poo.ficharios;
 import br.com.appdahora.poo.modelos.Aluno;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,6 +10,7 @@ public class FicharioAluno {
     // private Aluno alunos[];
     private ArrayList<Aluno> alunos;
     private Scanner entrada;
+    DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public FicharioAluno(ArrayList<Aluno> alunos){
         this.alunos = alunos;
@@ -15,7 +18,7 @@ public class FicharioAluno {
     }
 
     public void cadastrar(){
-        String nome, telefone, matricula, cpf, email, dataNascimento;
+        String nome, telefone, matricula, cpf, email, data;
         //TODO: Implementar o preenchimento da data de nascimento do aluno
         System.out.println(" === Cadastrar ALUNO ==== ");
         System.out.print("CPF: ");
@@ -31,7 +34,11 @@ public class FicharioAluno {
             telefone = entrada.nextLine();
             System.out.print("Email: ");
             email = entrada.nextLine();
-            Aluno aluno = new Aluno(cpf, nome, telefone, email);
+            //TODO: Inserir tratamento exceção para formatação da data
+            System.out.print("Data de Nascimento (dd/MM/yyyy): ");
+            data = entrada.nextLine();
+            LocalDate dataNascimento = LocalDate.parse(data, formatador);
+            Aluno aluno = new Aluno(cpf, nome, telefone, email, dataNascimento);
             alunos.add(aluno);
         }
 

@@ -1,5 +1,7 @@
 package br.com.appdahora.poo.modelos;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -7,7 +9,10 @@ public class Aluno extends Pessoa{
 
     private static int geradorCodigo;
     private int matricula;
+
+    private LocalDate dataNascimento;
     private ArrayList<Turma> turmas  = new ArrayList<Turma>();
+    DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     public void adicionarTurma(Turma turma){
         turmas.add(turma);
@@ -43,17 +48,18 @@ public class Aluno extends Pessoa{
 
         this.matricula = matricula;
     }
-    public Aluno(String cpf, String nome, String telefone, String email){
+    public Aluno(String cpf, String nome, String telefone, String email, LocalDate dataNascimento){
         matricula = ++geradorCodigo;
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
+        this.dataNascimento = dataNascimento;
     }
     @Override
     public String toString(){
 
-        return "Matricula: "+this.matricula + " Cpf: "+this.cpf+" Nome: "+this.nome+" Telefone: "+this.telefone+"  Email: "+this.email+"  Situacao: "+this.situacaoAluno;
+        return "Matricula: "+this.matricula + " Cpf: "+this.cpf+" Nome: "+this.nome+" Telefone: "+this.telefone+"  Email: "+this.email+" Data de Nascimento: "+this.dataNascimento.format(formatador)+"  Situacao: "+this.situacaoAluno;
     }
 
 }
