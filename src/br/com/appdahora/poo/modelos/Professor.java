@@ -19,18 +19,6 @@ public class Professor extends Pessoa{
         return "Registro: "+this.registro + " Cpf: "+this.cpf+" Nome: "+this.nome+" Telefone: "+this.telefone+"  Email: "+this.email;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Professor professor = (Professor) o;
-        return Objects.equals(registro, professor.registro);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(registro);
-    }
     public String getRegistro() {
         return registro;
     }

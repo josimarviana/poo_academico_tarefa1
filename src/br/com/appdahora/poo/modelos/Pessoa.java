@@ -1,6 +1,7 @@
 package br.com.appdahora.poo.modelos;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Pessoa {
     protected String nome;
@@ -24,6 +25,19 @@ public class Pessoa {
     }
     public Pessoa(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(cpf, pessoa.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(cpf);
     }
 
     public String getTelefone() {
