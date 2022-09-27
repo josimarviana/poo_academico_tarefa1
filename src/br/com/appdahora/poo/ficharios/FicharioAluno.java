@@ -105,7 +105,6 @@ public class FicharioAluno {
     public void consultar() {
 
         System.out.println(" === Consultar ALUNO === ");
-
         Aluno aluno = buscar();
 
         if (aluno != null) {
@@ -117,9 +116,26 @@ public class FicharioAluno {
 
     public Aluno buscar(){
         //TODO: Inserir tratamento de erro para busca
-        System.out.println("Qual o aluno deseja? Digite o cpf");
-        String cpfBusca = entrada.nextLine();
-        return alunos.get(alunos.indexOf(new Aluno(cpfBusca)));
+        System.out.println("Qual o aluno deseja? Informe o critério de busca: ");
+        System.out.println("Buscar por (1-cpf) e (2-matrícula) ");
+        int resp = entrada.nextInt();
+        entrada.skip("\n");
+
+        if (resp == 1) {
+            System.out.print("Informe o cpf do aluno: ");
+            String cpfBusca = entrada.nextLine();
+            return alunos.get(alunos.indexOf(new Aluno(cpfBusca)));
+        } else {
+            System.out.print("Informe a matricula do aluno: ");
+            int matricula = entrada.nextInt();
+
+            for(Aluno aluno: alunos){
+                if(aluno.getMatricula()==matricula) {
+                    return aluno;
+                }
+            }
+        }
+        return null;
     }
     public void relatorio() {
 
