@@ -39,13 +39,10 @@ public class FicharioAluno {
 
     public void alterar() {
         String nome, telefone, cpf, email;
-        String cpfBusca;
 
         System.out.println(" ==== Alterar ALUNO ==== ");
-        System.out.println("Qual o aluno deseja alterar? Digite o cpf");
-        cpfBusca = entrada.nextLine();
-        entrada.skip("\n");
-        Aluno aluno = buscar(cpfBusca);
+
+        Aluno aluno = buscar();
         //TODO: Ajustar busca para matricula ou cpf
         try{
             if (aluno != null) {
@@ -81,13 +78,10 @@ public class FicharioAluno {
     }
 
     public void excluir() {
-        String cpfBusca;
         int resp;
         System.out.println(" --==[Excluir ALUNO]==-- ");
         //TODO: Inserir try/catch para lançar exceção de busca fora do índice
-        System.out.println("Qual o aluno deseja excluir? Digite o cpf");
-        cpfBusca = entrada.nextLine();
-        Aluno aluno = buscar(cpfBusca);
+        Aluno aluno = buscar();
 
         if (aluno.getQuantidadeTurmas()==0) {
             System.out.println(aluno);
@@ -109,13 +103,10 @@ public class FicharioAluno {
     }
 
     public void consultar() {
-        String cpfBusca;
 
         System.out.println(" === Consultar ALUNO === ");
-        System.out.println("Qual o aluno que deseja consultar? digite o cpf");
-        cpfBusca = entrada.nextLine();
 
-        Aluno aluno = buscar(cpfBusca);
+        Aluno aluno = buscar();
 
         if (aluno != null) {
             System.out.println(alunos.get(alunos.indexOf(aluno)));
@@ -124,9 +115,11 @@ public class FicharioAluno {
         }
     }
 
-    public Aluno buscar(String cpf){
+    public Aluno buscar(){
         //TODO: Inserir tratamento de erro para busca
-        return alunos.get(alunos.indexOf(new Aluno(cpf)));
+        System.out.println("Qual o aluno deseja? Digite o cpf");
+        String cpfBusca = entrada.nextLine();
+        return alunos.get(alunos.indexOf(new Aluno(cpfBusca)));
     }
     public void relatorio() {
 
