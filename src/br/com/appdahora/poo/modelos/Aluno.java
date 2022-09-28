@@ -29,7 +29,7 @@ public class Aluno extends Pessoa{
         this.situacaoAluno = situacaoAluno;
     }
 
-    private SituacaoAluno situacaoAluno = SituacaoAluno.NaoMatriculado;
+    private SituacaoAluno situacaoAluno = SituacaoAluno.NAOMATRICULADO;
 
     public int getMatricula() {
         return matricula;

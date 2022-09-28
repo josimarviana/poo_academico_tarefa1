@@ -1,9 +1,9 @@
 package br.com.appdahora.poo.modelos;
 
 public enum SituacaoAluno{
-    NaoMatriculado{
+    NAOMATRICULADO{
         public String toString(){
             return "Não Matriculado";
         }
-    }, Matriculado, Formado, Cancelado, Desistente;
+    }, MATRICULADO, FORMADO, CANCELADO, DESISTENTE;
 }
