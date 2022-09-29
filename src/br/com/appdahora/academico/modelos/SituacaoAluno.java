@@ -1,4 +1,4 @@
-package br.com.appdahora.poo.modelos;
+package br.com.appdahora.academico.modelos;
 
 public enum SituacaoAluno{
     NAOMATRICULADO{

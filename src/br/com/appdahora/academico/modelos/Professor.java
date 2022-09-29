@@ -1,6 +1,4 @@
-package br.com.appdahora.poo.modelos;
-
-import java.util.Objects;
+package br.com.appdahora.academico.modelos;
 
 public class Professor extends Pessoa{
 

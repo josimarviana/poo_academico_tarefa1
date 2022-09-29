@@ -1,11 +1,11 @@
-import br.com.appdahora.poo.ficharios.FicharioAluno;
-import br.com.appdahora.poo.ficharios.FicharioEnturmacao;
-import br.com.appdahora.poo.ficharios.FicharioProfessor;
-import br.com.appdahora.poo.ficharios.FicharioTurma;
-import br.com.appdahora.poo.modelos.Aluno;
-import br.com.appdahora.poo.modelos.Enturmacao;
-import br.com.appdahora.poo.modelos.Professor;
-import br.com.appdahora.poo.modelos.Turma;
+import br.com.appdahora.academico.ficharios.FicharioAluno;
+import br.com.appdahora.academico.ficharios.FicharioEnturmacao;
+import br.com.appdahora.academico.ficharios.FicharioProfessor;
+import br.com.appdahora.academico.ficharios.FicharioTurma;
+import br.com.appdahora.academico.modelos.Aluno;
+import br.com.appdahora.academico.modelos.Enturmacao;
+import br.com.appdahora.academico.modelos.Professor;
+import br.com.appdahora.academico.modelos.Turma;
 
 import java.util.ArrayList;
 import java.util.Scanner;

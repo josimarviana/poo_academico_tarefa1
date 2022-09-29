@@ -1,6 +1,6 @@
-package br.com.appdahora.poo.ficharios;
+package br.com.appdahora.academico.ficharios;
 
-import br.com.appdahora.poo.modelos.Professor;
+import br.com.appdahora.academico.modelos.Professor;
 
 import java.util.ArrayList;
 import java.util.Scanner;

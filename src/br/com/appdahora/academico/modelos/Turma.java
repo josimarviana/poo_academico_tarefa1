@@ -1,4 +1,4 @@
-package br.com.appdahora.poo.modelos;
+package br.com.appdahora.academico.modelos;
 
 import java.util.ArrayList;
 import java.util.Objects;

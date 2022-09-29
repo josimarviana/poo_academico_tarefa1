@@ -1,5 +1,5 @@
-package br.com.appdahora.poo.ficharios;
-import br.com.appdahora.poo.modelos.Aluno;
+package br.com.appdahora.academico.ficharios;
+import br.com.appdahora.academico.modelos.Aluno;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

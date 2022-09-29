@@ -1,9 +1,8 @@
-package br.com.appdahora.poo.modelos;
+package br.com.appdahora.academico.modelos;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class Aluno extends Pessoa{
 
