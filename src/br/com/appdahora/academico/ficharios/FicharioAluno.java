@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FicharioAluno implements fichario{
+public class FicharioAluno implements Fichario{
     // private Aluno alunos[];
     private ArrayList<Aluno> alunos;
     private Scanner entrada;
