@@ -7,7 +7,7 @@ import br.com.appdahora.academico.modelos.Turma;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FicharioEnturmacao {
+public class FicharioEnturmacao implements Fichario{
     private ArrayList<Turma> turmas;
     private ArrayList<Aluno> alunos;
     private ArrayList<Enturmacao> enturmacoes;
@@ -43,7 +43,7 @@ public class FicharioEnturmacao {
             enturmacoes.add(enturmacao);
         }
     }
-
+    public void alterar(){}
     public void excluir() {
         int pos, resp;
 

@@ -5,5 +5,5 @@ public enum SituacaoAluno{
         public String toString(){
             return "Não Matriculado";
         }
-    }, MATRICULADO, FORMADO, CANCELADO, DESISTENTE;
+    }, MATRICULADO, FORMADO, CANCELADO, DESISTENTE
 }

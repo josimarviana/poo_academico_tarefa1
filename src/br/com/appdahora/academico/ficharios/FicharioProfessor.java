@@ -5,7 +5,7 @@ import br.com.appdahora.academico.modelos.Professor;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FicharioProfessor {
+public class FicharioProfessor implements Fichario{
     private ArrayList<Professor> professores;
     private Scanner entrada;
 

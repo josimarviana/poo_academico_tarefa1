@@ -5,7 +5,7 @@ import br.com.appdahora.academico.modelos.Turma;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class FicharioTurma {
+public class FicharioTurma implements Fichario{
 
     private ArrayList<Turma> turmas;
     private final Scanner entrada;
